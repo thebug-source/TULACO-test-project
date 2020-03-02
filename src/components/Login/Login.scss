@@ -1,0 +1,142 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+  .login{
+    .login-content {
+      display: flex;
+      justify-content: center;
+      background-color: #cccccc;
+      border-radius: 5px;
+
+      .logo-gh {
+        margin: 10px;
+        .picture {
+          width: 120px;
+          height: 120px;
+        }
+      }
+      .loginForm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: space-between;
+        margin: 10px;
+
+        .form-group {
+          margin: 5px;
+
+          label {
+            margin-right: 5px;
+          }
+
+          input[type="text"],
+          input[type="password"] {
+            min-width: 180px;
+            border-radius: 3px;
+            background-color: #ffffff;
+            border: 1px solid #222222;
+            color: #222222;
+            padding: 6px;
+
+            &:hover,
+            &:hover {
+                background-color: #d1e5b3;
+                transition: background-color 250ms;
+            }
+
+            &:focus,
+            &:focus {
+                background-color: #d1e5b3;
+                border: 1px solid #222222;
+                outline: #222222
+            }
+          }
+
+        button {
+          @include link-button;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 680px) {
+  .login{
+    .login-content {
+      .logo-gh {
+        .picture {
+          width: 100px;
+          height: 100px;
+        }
+      }
+      .loginForm {
+        .form-group {
+          label {      
+            font-size: 0.8rem;
+          }
+          input[type="text"],
+          input[type="password"] {
+            min-width: 150px;
+            font-size: 0.7rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 580px) {
+  .login{
+    .login-content {
+      .logo-gh {
+        .picture {
+          width: 80px;
+          height: 80px;
+        }
+      }
+      .loginForm {
+        .form-group {
+          label {      
+            font-size: 0.7rem;
+          }
+          input[type="text"],
+          input[type="password"] {
+            min-width: 130px;
+            font-size: 0.6rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 480px) {
+  .login{
+    .login-content {
+      .logo-gh {
+        .picture {
+          width: 60px;
+          height: 60px;
+        }
+      }
+      .loginForm {
+        .form-group {
+          label {      
+            font-size: 0.6rem;
+          }
+          input[type="text"],
+          input[type="password"] {
+            min-width: 120px;
+            font-size: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 320px) {
+  .login-content {
+    flex-direction: column;
+  }
+}

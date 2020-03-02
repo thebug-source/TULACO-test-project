@@ -1,0 +1,40 @@
+.activ-name {
+  padding-bottom: 0;
+
+  h1 {
+    color: #537024;
+    font-size: 2rem;
+  }
+}
+
+@media all and (max-width: 680px) {
+  .activ-name {
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media all and (max-width: 580px) {
+  .activ-name {
+    h1 {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@media all and (max-width: 480px) {
+  .activ-name {
+    h1 {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media all and (max-width: 320px) {
+  .activ-name {
+    h1 {
+      font-size: 0.8rem;
+    }
+  }
+}

@@ -1,0 +1,162 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.treesList{
+  display: flex;
+
+  .tree {
+    background-color: #cccccc;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+  
+    .tree-header {
+      display: flex;
+      .tree-picture {
+        .picture:hover {
+          opacity: 1;
+        }
+        .picture {
+          border: 1px solid $border-green;
+          border-radius: 5px;
+          width: 200px;
+          height: 200px;
+          opacity: 0.9;
+        }
+      }
+      .tree-name {
+        h5 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .tree-description {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .treesList{
+    .tree {
+      .tree-header {
+        .tree-picture {
+          .picture {
+            width: 150px;
+            height: 150px;
+          }
+        }
+        .tree-name {
+          h5 {
+            font-size: 1.3rem;
+         }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1050px) {
+  .treesList {
+    .tree {
+      .tree-header {
+        .tree-picture {    
+          .picture {
+            width: 130px;
+            height: 130px;
+          }
+        }
+        .tree-name {
+          h5 {
+            position: relative;
+            left: 10%;
+            font-size: 1.3rem;
+         }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .treesList {
+    .tree {
+      .tree-header {
+        .tree-picture {    
+          .picture {
+            width: 100px;
+            height: 100px;
+          }
+        }
+        .tree-name {
+          h5 {
+            font-size: 1rem;
+          }
+        }
+      }
+      .tree-description {
+        font-size: 0.7rem;
+      }    
+    }
+  }
+}
+
+@media all and (max-width: 850px) { 
+  .treesList {
+    .tree {
+      .tree-header {
+        .tree-name {
+          h5 {
+            font-size: 0.9rem;
+          }
+        }
+      }
+      .tree-description {
+        font-size: 0.7rem;
+      }    
+    }
+  }
+}
+
+@media all and (max-width: 700px) { 
+  .treesList {
+    flex-direction: column;
+    .tree {
+      margin: 3px;
+      padding: 7px;
+      .tree-header {
+        .tree-name {
+          h5 {
+            font-size: 0.8rem;
+          }
+        }
+      }
+      .tree-description {
+        font-size: 0.6rem;
+      }            
+    }
+  }
+}
+
+@media all and (max-width: 480px) { 
+  .treesList {
+    .tree {
+      .tree-description {
+        font-size: 0.5rem;
+      }            
+    }
+  }
+}
+
+@media all and (max-width: 320px) { 
+  .treesList {
+    .tree {
+      .tree-header {
+        flex-direction: column;
+      }
+      .tree-description {
+        font-size: 0.4rem;
+      }            
+    }
+  }
+}

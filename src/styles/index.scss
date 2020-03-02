@@ -1,0 +1,143 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+html {
+    font-family: $font-family;
+    font-size: $font-size;
+    color: $font-color;
+
+    body {
+        margin: 0;
+        padding: 0;
+
+        content.root {
+            margin: 0;
+            padding: 0;
+        
+            div.main {
+                position: relative;
+                top: $header-height + 30px;
+        
+                margin-top: 20px;
+                margin-right: 10px;
+                margin-bottom: $footer-height + 30px;
+                margin-left: 10px;
+                padding: 5px;
+                border: 1px solid $border-green;
+                border-radius: 4px;
+                background-color: $background-color-content;
+        
+                .fill {
+                    .home-page-top p {
+                        background-color: #cccccc;
+                        font-size: 1.2rem;
+                        border-radius: 5px;
+                        padding: 5px;
+                    }
+                    .home-page-next {
+                        background-color: #cccccc;
+                        border-radius: 5px;
+                        display: flex;
+                        flex: 1, 0 auto;
+                        margin: 0;
+                        padding: 0;
+            
+                        div {
+                            margin: 5px;
+                            padding: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 700px) {
+    html {
+        body {
+            content.root {
+                div.main {
+                    top: $header-height-680 + 20px;
+                    margin-bottom: $footer-height + 20px;
+
+                    .fill {
+                        .home-page-top p {
+                            font-size: 1rem;
+                        }    
+                        .home-page-next {
+                            font-size: 0.9rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 580px) {
+    html {
+        body {
+            content.root {
+                div.main {
+                    top: $header-height-580 + 15px;
+                    margin-bottom: $footer-height-580 + 20px;
+
+                    .fill {
+                        .home-page-top p {
+                            font-size: 0.9rem;
+                        }    
+                        .home-page-next {
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 480px) {
+    html {
+        body {
+            content.root {
+                div.main {
+                    top: $header-height-580 + 10px;
+                    margin-bottom: $footer-height-580 + 10px;
+
+                    .fill {
+                        .home-page-top p {
+                            font-size: 0.8rem;
+                        }    
+                        .home-page-next {
+                            font-size: 0.7rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 320px) {
+    html {
+        body {    
+            content.root {
+                div.main {
+                    top: $header-height-320 + 5px;
+
+                    .fill {
+                        .home-page-top p {
+                            font-size: 0.7rem;
+                        }    
+                        .home-page-next {
+                            flex-direction: column;
+                            font-size: 0.6rem;
+                        }
+                    }
+
+                }
+            }    
+        }
+    }    
+}
