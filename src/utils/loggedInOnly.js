@@ -7,7 +7,7 @@ export function loggedInOnly(Component) {
         render() {
             //const state = store.getState();
 
-            if (localStorage.getItem('userID')) {
+            if (sessionStorage.getItem('userID')) {
                 return <Component {...this.props} />
             }
             return <Redirect to="/login" />

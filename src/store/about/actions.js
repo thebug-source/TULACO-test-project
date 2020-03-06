@@ -11,7 +11,8 @@ export const loadAbout = () => {
         dispatch(setAboutLoading(true));
 
         try {
-            const about = await getAbout(localStorage.getItem('userID'));
+            const about = await getAbout(sessionStorage.getItem('userID'));
+
             dispatch(showAbout(about));
 
         } catch (error) {

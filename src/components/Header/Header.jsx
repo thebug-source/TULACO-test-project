@@ -7,7 +7,7 @@ class Header extends React.Component {
   render() {
     let loginLink = "/login";
 
-    if (localStorage.getItem("userID") !== null && typeof localStorage.getItem("userID") === "string") {
+    if (sessionStorage.getItem("userID") !== null && typeof sessionStorage.getItem("userID") === "string") {
       loginLink = "/logout";
     }
   

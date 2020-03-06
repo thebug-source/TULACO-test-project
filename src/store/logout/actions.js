@@ -11,7 +11,7 @@ export const logoutGitHub = () => {
     dispatch(setLogoutLoading(true));
 
     try {
-      localStorage.removeItem('userID');
+      sessionStorage.removeItem('userID');
 
       dispatch(logoutSuccess());
       history.push('/');

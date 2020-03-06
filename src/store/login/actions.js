@@ -14,7 +14,7 @@ export const loginGitHub = (username, password) => {
     try {
       const loginData = await sendLoginGHRequest(username, password);
 
-      localStorage.setItem('userID', loginData.user);
+      sessionStorage.setItem('userID', loginData.user);
 
       dispatch(loginSuccess());
 
